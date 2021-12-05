@@ -18,9 +18,17 @@
                 <form action=" {{route('home.update')}} " method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3">
-                        <img src="{{asset('storage/img/'.Auth::user()->photo)}}" alt="" height="80">
-                        <label for="" class="form-label">Upload Photo</label>
-                        <input type="file" class="form-control mt-2" name="photo">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <img src="{{asset('storage/img/'.Auth::user()->photo)}}" alt="" height="80">
+                            <div>
+                                <a href="https://www.facebook.com/profile.php?id=100062814686150">
+                                    <img src="data:image/png;base64,{{DNS2D::getBarcodePNG('09403179169', 'QRCODE')}}" alt="barcode" />
+                                </a>
+                                
+                            </div>
+                        </div>
+                        <label for="" class="form-label mt-2">Upload Photo</label>
+                        <input type="file" class="form-control" name="photo">
                     </div>
                     <div class="mb-3">
                         <label for="" class="form-label">Phone</label>

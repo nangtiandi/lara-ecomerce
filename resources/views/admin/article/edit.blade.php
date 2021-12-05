@@ -16,11 +16,17 @@
                     @method('put')
                     <div class="mb-3">
                         <label for="" class="form-label">Post Photo</label>
-                        <input type="file" class="form-control" name="photo" value="{{$article->photo}}">
+                        <input type="file" class="form-control @error('photo') is-invalid @enderror" name="photo" value="{{$article->photo}}">
+                        @error('photo')
+                            <div class="text-danger"> {{$message}} </div>
+                        @enderror
                     </div>
                     <div class="mb-3">
                         <label for="" class="form-label">Post Title</label>
-                        <input type="text" class="form-control" name="title" value="{{$article->title}}">
+                        <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{$article->title}}">
+                        @error('title')
+                            <div class="text-danger"> {{$message}} </div>
+                        @enderror
                     </div>
                     <div class="mb-3">
                         <label for="" class="form-label">Post Item</label>
@@ -32,7 +38,10 @@
                     </div>
                     <div class="mb-3">
                         <label for="" class="form-label">Post Price</label>
-                        <input type="text" class="form-control" name="price" value="{{$article->price}}">
+                        <input type="text" class="form-control @error('price') is-invalid @enderror" name="price" value="{{$article->price}}">
+                        @error('price')
+                            <div class="text-danger"> {{$message}} </div>
+                        @enderror
                     </div>
                     <div class="mb-3">
                         <label for="" class="form-label">Post Sale</label>

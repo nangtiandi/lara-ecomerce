@@ -16,7 +16,10 @@
                     @csrf
                     <div class="mb-3">
                         <label for="" class="form-label">Category</label>
-                        <input type="text" class="form-control" name="category" value=" {{$category->category}} ">
+                        <input type="text" class="form-control @error('category') is-invalid @enderror" name="category" value=" {{$category->category}} ">
+                        @error('category')
+                            <div class="text-danger">  {{$message}} </div>
+                        @enderror
                     </div>
                     <input type="submit" class="btn btn-outline-primary" value="Update Category">
                 </form>

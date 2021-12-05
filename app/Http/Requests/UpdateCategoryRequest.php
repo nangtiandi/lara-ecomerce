@@ -24,7 +24,13 @@ class UpdateCategoryRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'category' => 'required',
+        ];
+    }
+    public function messages()
+    {
+        return [
+            'category.required' => 'ပြန်လည်ပြင်ဆင်ရန်အတွက်အမျိုးအစားအားထည့်ပေးပါ။'
         ];
     }
 }

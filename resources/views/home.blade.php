@@ -1,11 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-<header class="bg-dark py-5">
+<header class="bg-secondary py-5">
     <div class="container px-4 px-lg-5 my-5">
+        <div class="d-flex justify-content-between align-items-center">
+            <img src=" {{asset('img/aaaa.jpg')}} " alt="">
         <div class="text-center text-white">
             <h1 class="display-4 fw-bolder">Shop in style</h1>
             <p class="lead fw-normal text-white-50 mb-0">Laravel MVC Testing Project</p>
+        </div>
         </div>
     </div>
 </header>

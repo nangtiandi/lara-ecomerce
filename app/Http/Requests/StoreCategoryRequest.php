@@ -24,7 +24,13 @@ class StoreCategoryRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'category' => 'required',
+        ];
+    }
+    public function messages()
+    {
+        return [
+            'category.required' => 'အမျိုးအစားအားထည့်ပေးရန်လိုအပ်နေပါသည်။'
         ];
     }
 }
